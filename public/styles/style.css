@@ -1,44 +1,58 @@
 .info{
 	width: 460px;
-	height:540px;
+	height:450px;
 	border-radius: 25px;
 	margin: auto;
 	background: rgba(0, 0, 0, 0.75);
-	top: 35%;
+	top: 30%;
 	left: 17%;
 	position: absolute;
 	transform: translate(-50%, -50%);
 	color: #fff;
-	padding: 20px;
+	padding: 10px;
 	box-sizing: border-box;
 }
 .database{
 	width: 460px;
-	height:540px;
+	height:450px;
 	border-radius: 25px;
 	margin: auto;
 	background: rgba(0, 0, 0, 0.75);
-	top: 35%;
+	top: 30%;
 	left: 50%;
 	position:absolute;
 	transform: translate(-50%, -50%);
 	color: #fff;
-	padding: 20px;
+	padding: 10px;
 	box-sizing: border-box;
 	overflow: scroll;
 }
 .update{
 	width: 460px;
-	height:540px;
+	height:450px;
 	border-radius: 25px;
 	margin: auto;
 	background: rgba(0, 0, 0, 0.75);
-	top: 35%;
+	top: 30%;
 	left: 83%;
 	position: absolute;
 	transform: translate(-50%, -50%);
 	color: #fff;
-	padding: 20px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.delete{
+	width: 460px;
+	height:250px;
+	border-radius: 25px;
+	margin: auto;
+	background: rgba(0, 0, 0, 0.75);
+	top: 77%;
+	left: 17%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	padding: 10px;
 	box-sizing: border-box;
 }
 .db_content{

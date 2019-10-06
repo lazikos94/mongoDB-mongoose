@@ -87,7 +87,7 @@ app.get('/mongoget',(req,res)=>{
     });
 });        
 
-app.get('/mongodelete',(req,res)=>{
+app.get('/mongoempty',(req,res)=>{
     MongoClient.connect(url_mongo,{useNewUrlParser: true,useUnifiedTopology:true},(err,client)=>{
         assert.equal(null,err);
         const db = client.db(mongodb);  
@@ -109,6 +109,19 @@ app.post('/mongoupdate',(req,res)=>{
         db.collection('data').updateOne({"_id":objectId(id)},{$set:data},(err,result)=>{
             assert.equal(null,err);
             console.log('Item updated');
+            client.close();
+        });  
+    });   
+});
+app.post('/mongodelete',(req,res)=>{
+
+    const id = req.body._id;
+    MongoClient.connect(url_mongo,{useNewUrlParser: true,useUnifiedTopology:true},(err,client)=>{
+        assert.equal(null,err);
+        const db = client.db(mongodb);
+        db.collection('data').deleteOne({"_id":objectId(id)},(err,result)=>{
+            assert.equal(null,err);
+            console.log('Item deleted');
             client.close();
         });  
     });   

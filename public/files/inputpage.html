@@ -17,11 +17,11 @@
         <input id="firstname" placeholder="Enter your firstname"/>
         <input id="lastname" placeholder="Enter your lastname"/>
         <input id="age" placeholder="Enter your age"/>
+        <button type ="submit" id="submit">Submit</button>
     </form>
-      <button type ="submit" id="submit">submit</button>
     </div>
     <div id="database" class="database" >
-      <button type ="button" id="show">showdb</button>
+      <button type ="button" id="show">Show db</button>
     </div>
     <div id="update" class="update" >
       <h2>Update</h2>
@@ -30,9 +30,16 @@
           <input id="ufirstname" placeholder="Enter new name"/>
           <input id="ulastname" placeholder="Enter new lastname"/>
           <input id="uage" placeholder="Enter new age"/>
+          <button type ="submit" id="update_info">Update</button>
       </form>
-      <button type ="submit" id="update_info">submit</button>
-      <button type ="button" id="empty">emptydb</button>
+      <button type ="button" id="empty">Empty db</button>
+    </div>
+    <div id="delete" class="delete" >
+      <h2>Delete</h2>
+      <form>
+          <input id="delete_id" placeholder="Enter ID"/>
+          <button type ="submit" id="delete_entry">Delete</button>
+      </form>
     </div>
   </body>
   <script src="../files/inputscript.js"></script>
