@@ -59,6 +59,7 @@ const deleteDocuments = function(db, callback) {
 app.post('/mongodb',(req,res)=>{
     const userdata = new Data(req.body);
     userdata.save();
+    console.log('Item added');
 })
 
 app.get('/mongodb',(req,res)=>{

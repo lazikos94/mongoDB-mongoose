@@ -55,15 +55,18 @@ try{
     document.getElementById('show').addEventListener('click', async ()=>{
         const response = await fetch('/mongoget');
         const json = await response.json();
+        let i=1;
         json.forEach((item)=>{
             $("div.database").append(
                 `<div class='db_content'>
+                    <p id='data'> Entry_Number: ${i}</p>
                     <p id='data'> _id: ${item._id}</p>
-                    <p id='data'> First Name: ${item.first_name}</p>
-                    <p id='data'> Last Name: ${item.last_name}</p>
+                    <p id='data'> First_Name: ${item.first_name}</p>
+                    <p id='data'> Last_Name: ${item.last_name}</p>
                     <p id='data'> Age: ${item.age}</p>
                 </div>`
             );
+            i=i+1;
         })       
         console.log(json);
     });
