@@ -9,7 +9,7 @@ const objectId = require('mongodb').ObjectID;
 const app = express(); 
 const port = process.env.PORT || 5000;
 app.use(cors());
-app.listen(port, ()=> console.log('listening'));
+app.listen(port, ()=> console.log('connected to port',port));
 app.use(express.static(__dirname + '/public'));
 app.use(express.json({limit:'10mb'}));
 const mongodb = 'mongoDatabase';
@@ -109,7 +109,7 @@ app.post('/mongoupdate',(req,res)=>{
         const db = client.db(mongodb);
         db.collection('data').updateOne({"_id":objectId(id)},{$set:data},(err,result)=>{
             assert.equal(null,err);
-            console.log('Item updated');
+            console.log('Item',objectId(id) ,'updated');
             client.close();
         });  
     });   
@@ -122,7 +122,7 @@ app.post('/mongodelete',(req,res)=>{
         const db = client.db(mongodb);
         db.collection('data').deleteOne({"_id":objectId(id)},(err,result)=>{
             assert.equal(null,err);
-            console.log('Item deleted');
+            console.log('Item',objectId(id) ,'deleted');
             client.close();
         });  
     });   
